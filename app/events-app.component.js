@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var EventsAppComponent = (function () {
     function EventsAppComponent() {
     }
@@ -17,9 +18,17 @@ var EventsAppComponent = (function () {
 EventsAppComponent = __decorate([
     core_1.Component({
         selector: 'events-app',
+        providers: [common_1.Location, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
         template: "\n    <nav-bar></nav-bar>\n    <router-outlet></router-outlet>\n    "
     }),
     __metadata("design:paramtypes", [])
 ], EventsAppComponent);
 exports.EventsAppComponent = EventsAppComponent;
+var HashLocationComponent = (function () {
+    function HashLocationComponent(location) {
+        this.location = location;
+    }
+    return HashLocationComponent;
+}());
+exports.HashLocationComponent = HashLocationComponent;
 //# sourceMappingURL=events-app.component.js.map

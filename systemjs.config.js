@@ -20,9 +20,7 @@
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
       '@angular/upgrade/static': 'npm:@angular/upgrade/bundles/upgrade-static.umd.js',
-      'rxjs': 'npm:rxjs',
-      'angular2-masonry': 'npm:angular2-masonry',
-      'masonry-layout': 'npm:masonry-layout/dist/masonry.pkgd.min.js'
+      'rxjs': 'npm:rxjs'
     },
     packages: {
       app: {
@@ -32,7 +30,6 @@
       rxjs: {
         defaultExtension: 'js'
       },
-      'angular2-masonry': { "defaultExtension": "js", "main": "index" }
     }
   });
 })(this);

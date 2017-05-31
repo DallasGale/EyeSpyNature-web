@@ -12,7 +12,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
-var angular2_masonry_1 = require("angular2-masonry");
+// import { MasonryModule } from 'angular2-masonry';
 // Main app
 var eyespynature_app_component_1 = require("./eyespynature-app.component");
 // Landing
@@ -50,7 +50,6 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             router_1.RouterModule.forRoot(routes_1.appRoutes),
             forms_1.FormsModule,
-            angular2_masonry_1.MasonryModule
         ],
         declarations: [
             eyespynature_app_component_1.EyeSpyNatureAppComponent,

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { MasonryModule } from 'angular2-masonry';
+// import { MasonryModule } from 'angular2-masonry';
 
 // Main app
 import { EyeSpyNatureAppComponent } from './eyespynature-app.component';
@@ -38,7 +38,7 @@ import { appRoutes } from './routes';
         BrowserModule,
         RouterModule.forRoot(appRoutes),
         FormsModule,
-        MasonryModule
+        // MasonryModule
     ],
     declarations: [
         EyeSpyNatureAppComponent,

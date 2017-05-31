@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { GlobalService } from '../services/global-settings.service';
-import { NavigationService } from '../services/nav.service';
+import { Component, OnInit } from '@angular/core'
+import { GlobalService } from '../services/global-settings.service'
+import { NavigationService } from '../services/nav.service'
 
 @Component({
     selector: 'nav-bar',

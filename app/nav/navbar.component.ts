@@ -1,22 +1,24 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core';
+import { GlobalService } from '../services/global-settings.service';
+import { NavigationService } from '../services/nav.service';
 
 @Component({
     selector: 'nav-bar',
     templateUrl: 'app/nav/navbar.component.html',
-    styles: [`
-        .nav.navbar-nav {
-            font-size: 15px;
-        }
-        #searchForm {
-            margin-right: 100px;
-        }
-        @media (max-width: 1200px) {
-            #searchForm {
-                display: none;
-            }
-        }
-    `]
+    styles: []
 })
 export class NavBarComponent {
+    nav:any[]
+    branding: any
+    social:any[]
+
+    constructor(private globalService: GlobalService, private navigationService: NavigationService ) {
+
+    }
+     ngOnInit() {
+        this.branding = this.globalService
+        this.nav = this.navigationService.getNavs()
+        this.social = this.navigationService.getSocials()
+    }
 
 }

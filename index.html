@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <base href="/">
-    <title>ng Events</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="node_modules/toastr/build/toastr.min.css">
-    <link rel="stylesheet" href="node_modules/ng2f-bootstrap/dist/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
 
-    <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-    
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/toastr/build/toastr.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    
-    <script src="systemjs.config.js"></script>
-    <script>
-      System.import('app').catch(function(err){
-        console.error(err);
-      });
-    </script>
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="description" content="Creative botanic photography of insects, plants, wildlife, landscapes, light and water.">
+  <title>Eye Spy Nature - Botanic Photography</title>
+  <meta name="description" content="">
+  <meta property="og:title" content="EYE SPY NATURE - Botanical Photography">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="www.eyespynature.net">
+  <meta property="og:description" content="Creative botanic photography of insects, plants, wildlife, landscapes, light and water.">
+  <meta name="twitter:title" content="EYE SPY NATURE - Botanical Photography">
+  <meta name="twitter:type" content="website">
+  <meta name="twitter:image" content="">
+  <meta name="twitter:url" content="www.eyespynature.net">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="app/images/icons/favicon.ico" sizes="16x16">
 
-  </head>
-  
-  <body class="container">
-    <events-app></events-app>
-    test
-  </body>
+  <link rel="stylesheet" href="node_modules/toastr/build/toastr.min.css">
+  <link rel="stylesheet" href="node_modules/ng2f-bootstrap/dist/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="app/css/styles.css" />
+
+  <!--<link rel="stylesheet" href="styles.css">-->
+
+  <!-- Polyfill(s) for older browsers -->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/toastr/build/toastr.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+  <script src="systemjs.config.js"></script>
   <script>
-    toastr.success('This is a toast!')
+    System.import('app').catch(function (err) {
+      console.error(err);
+    });
+
+    var root = document.documentElement;
+    root.className += ' landing-page';
   </script>
+
+</head>
+
+<body id="top">
+  <eyespy-app></eyespy-app>
+</body>
+<!--<script>
+    toastr.success('This is a toast!')
+
+</script>-->
+
+<!-- Umbraco -->
+<script src="https://use.typekit.net/jae2mxu.js"></script>
+<script src="app/Scripts/dependencies.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script src="app/Scripts/scripts.js"></script>
+
 
 </html>

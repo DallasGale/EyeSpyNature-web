@@ -9,18 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var global_settings_service_1 = require("../services/global-settings.service");
+var nav_service_1 = require("../services/nav.service");
 var NavBarComponent = (function () {
-    function NavBarComponent() {
+    function NavBarComponent(globalService, navigationService) {
+        this.globalService = globalService;
+        this.navigationService = navigationService;
     }
+    NavBarComponent.prototype.ngOnInit = function () {
+        this.branding = this.globalService;
+        this.nav = this.navigationService.getNavs();
+        this.social = this.navigationService.getSocials();
+    };
     return NavBarComponent;
 }());
 NavBarComponent = __decorate([
     core_1.Component({
         selector: 'nav-bar',
         templateUrl: 'app/nav/navbar.component.html',
-        styles: ["\n        .nav.navbar-nav {\n            font-size: 15px;\n        }\n        #searchForm {\n            margin-right: 100px;\n        }\n        @media (max-width: 1200px) {\n            #searchForm {\n                display: none;\n            }\n        }\n    "]
+        styles: []
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [global_settings_service_1.GlobalService, nav_service_1.NavigationService])
 ], NavBarComponent);
 exports.NavBarComponent = NavBarComponent;
 //# sourceMappingURL=navbar.component.js.map

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var event_service_1 = require("../shared/event.service");
+var event_service_1 = require("../../services/event.service");
 var router_1 = require("@angular/router");
 var EventDetailsComponent = (function () {
     function EventDetailsComponent(eventService, route) {

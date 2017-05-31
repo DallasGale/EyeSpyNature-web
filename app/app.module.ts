@@ -32,13 +32,6 @@ import { NavigationService } from './services/nav.service';
 import { ToastrService } from './common/toastr.service';
 import { appRoutes } from './routes';
 
-// import { JQ_TOKEN, PopupTriggerDirective } from './common/index'
-
-// declare let jQuery : Object;
-
-// import './Scripts/customDependencies';
-// import './Scripts/customScripts';
-
 
 @NgModule({
     imports: [

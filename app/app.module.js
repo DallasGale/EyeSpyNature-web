@@ -39,10 +39,6 @@ var navbar_component_1 = require("./nav/navbar.component");
 var nav_service_1 = require("./services/nav.service");
 var toastr_service_1 = require("./common/toastr.service");
 var routes_1 = require("./routes");
-// import { JQ_TOKEN, PopupTriggerDirective } from './common/index'
-// declare let jQuery : Object;
-// import './Scripts/customDependencies';
-// import './Scripts/customScripts';
 var AppModule = (function () {
     function AppModule() {
     }

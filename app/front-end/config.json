@@ -1,0 +1,20 @@
+{
+	"paths": {
+		"base": {
+			"src": "src/",
+			"dist": "../"
+		},
+		"scripts": {
+			"src": "src/scripts/",
+			"dist": "../Scripts/"
+		},
+		"styles": {
+			"src": "src/styles/",
+			"dist": "../css/"
+		},
+		"images": {
+			"src": "src/images/",
+			"dist": "../images/"
+		}
+	}
+}

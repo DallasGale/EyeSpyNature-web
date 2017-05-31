@@ -1,0 +1,162 @@
+/*@import "base";
+@import "layout";
+@import "landing";
+@import "custom";*/
+@import "photoswipe";
+@import "base";
+@import "bootstrap-min";
+@import "bootstrap-grid";
+@import "mixins";
+@import "typography";
+@import "landing";
+@import "layout";
+@import "hero";
+@import "nav";
+
+body {
+    background-color: white;
+    color: #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
+// Header
+
+
+html.landing-page {
+    body {
+        background-color: #000000;
+    }
+
+    .header {
+        z-index: 20;
+        width: 100%;
+        color: black;
+        height: 100px;
+        position: fixed;
+        top: -200px;
+        display: block;
+        padding: 20px;
+        background: white;
+        transition: all 500ms cubic-bezier(0.310, 0.915, 0.415, 1.000); /* custom */
+        @include respond-to(phone-down) {
+            background: none;
+            padding: 0;
+            top: 0;
+        }
+    }
+    
+}
+
+.header {
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    color: black;
+    height: 100px;
+    position: fixed;
+    display: block;
+    padding: 20px;
+    background: white;
+    transition: all 500ms cubic-bezier(0.310, 0.915, 0.415, 1.000); /* custom */
+    @include respond-to(phone-down) {
+        padding: 0;
+    }
+}
+
+
+
+
+.header__logo {
+    @include headerHeight;
+}
+
+.branding {
+    z-index: 20;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    display: table;
+    text-align: center;
+    text-transform: uppercase;
+
+    .branding__logo {
+        display: table-cell;
+        vertical-align: middle;
+
+        img {
+            padding-top: 4px;
+            @include headerHeight;
+        }
+    }
+
+    .branding__type {
+        width: 200px;
+        float: left;
+    }
+
+    .branding__type--title {
+        font-size: 14px;
+        letter-spacing: 1.4px;
+    }
+
+    .branding__type--signature {
+        font-size: 9px;
+        letter-spacing: 3px;
+
+        .name {
+            font-size: 9px;
+            letter-spacing: 3px;
+            @include titlefont;
+            color: $themeColor2;
+        }
+    }
+
+    @include respond-to(phone-down) {
+        display: none;
+    }
+}
+
+
+
+
+a, button {
+    cursor: pointer;
+}
+
+
+html.nav-up {
+    .header {
+        top: 0;
+    }
+}
+
+
+
+// Footer
+
+.footer {
+    position: relative;
+    display: table;
+    width: 100%;
+    background: #fbfbfb;
+
+    .footer__content {
+        height: 500px;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        .footer__content--branding {
+            width: 100px;
+            height: auto;
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

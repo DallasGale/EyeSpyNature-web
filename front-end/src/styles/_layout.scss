@@ -1,0 +1,311 @@
+@import '_base';
+
+// Content/Containers
+
+.slim-content {
+    max-width: 960px;
+}
+
+@mixin layer {
+    background-color: rgba(128, 128, 128, 0.5);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70%;
+    height: 68%;
+}
+
+.section__printinfo {
+    max-width: 80%;
+    margin: 0 auto;
+
+    .printinfo__box {
+        min-height: 300px;
+    }
+
+    .section__printinfo--heading {
+        text-align: center;
+    }
+
+    .printinfo__tech {
+        &.background {
+            margin: 100px auto 100px;
+            width: 886px;
+            height: 546px;
+            background-color: $lightGrey;
+            position: relative;
+            display: block;
+
+            @include respond-to(tablet-down) {
+                width: 612px;
+                height: 377px;
+            }
+
+            @include respond-to(phone-down) {
+                width: 300px;
+                height: 182px;
+            }
+
+            .middleground {
+                @include layer;
+                opacity: 0.5;
+                z-index: 4;
+
+                .foreground {
+                    z-index: 5;
+                    @include layer;
+                    opacity: 0.9;
+                }
+            }
+        }
+
+        .measurement__vertical {
+            position: absolute;
+            width: 10px;
+            display: block;
+            height: 546px;
+            top: 0;
+            left: -20px;
+            border-left: 1px solid $lightGrey;
+            border-bottom: 1px solid $lightGrey;
+
+            @include respond-to(tablet-down) {
+                height: 377px;
+            }
+
+            @include respond-to(phone-down) {
+                height: 222px;
+            }
+
+            .increments {
+                display: block;
+                width: 10px;
+
+                &.one {
+                    height: 32%;
+                    border-top: 1px solid $lightGrey;
+                }
+
+                &.two {
+                    height: 22%;
+                    border-top: 1px solid $lightGrey;
+                }
+
+                &.three {
+                    border-top: 1px solid $lightGrey;
+                }
+
+                .length {
+                    left: -30px;
+                    top: -6px;
+                    position: relative;
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .measurement__horizontal {
+            position: absolute;
+            width: 100%;
+            display: block;
+            bottom: -20px;
+            height: 10px;
+            border-right: 1px solid $lightGrey;
+            border-bottom: 1px solid $lightGrey;
+
+            .increments {
+                display: inline-block;
+                height: 10px;
+
+                &.one {
+                    border-left: 1px solid $lightGrey;
+                    width: 48.7%;
+                }
+
+                &.two {
+                    border-left: 1px solid $lightGrey;
+                    width: 20.8%;
+                }
+
+                &.three {
+                    border-left: 1px solid $lightGrey;
+                    width: auto;
+                }
+
+                .length {
+                    bottom: -10px;
+                    position: relative;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// SECTION :: Recent work + Gallery + About
+
+.section__gallery {
+    min-height: 100vh;
+    padding-top: 140px;
+    width: 70%;
+    margin: 0 auto;
+    .grid-sizer,
+    .grid-item {
+        width: calc(33% - 10px);
+    }
+}
+
+.section__gallery--heading {
+    text-align: center;
+    padding-bottom: 60px;
+}
+.section__recentwork {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+
+    .col-xs-6, .col-sm-6, .col-md-6 {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+.section__recentwork--heading {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    width: auto;
+}
+
+.section__recentwork--info {
+    .section__recentwork--info-specs {
+    }
+
+    .section__recentwork--info-location {
+        text-align: right;
+        font-style: italic;
+    }
+}
+
+.section__recentwork--row {
+    max-width: 80%;
+    padding-bottom: 260px;
+    margin: 0 auto;
+
+    .grid-sizer,
+    .grid-item {
+        width: calc(25% - 10px);
+    }
+}
+
+.section__recentwork--img-container {
+    padding-bottom: 80px;
+}
+
+.section__gallery--img-container {
+    padding-bottom: 40px;
+}
+
+
+.section__recentwork--img-container,
+.section__gallery--img-container {
+    img {
+        width: 100%;
+    }
+
+    .landscape {
+        width: 100%;
+        height: auto;
+    }
+
+    &.portrait {
+        width: 100%;
+        height: auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    
+
+    &.even {
+        position: relative;
+        display: block;
+    }
+}
+
+
+.section__about {
+    padding-top: 200px;
+    .section__about--heading {
+        text-align: center;
+    }
+}
+
+.section__contact {
+    padding-top: 200px;
+    .section__contact--heading {
+        text-align: center;
+    }
+}
+
+
+// Masonry Grid
+
+.grid {
+    margin: 0 auto;
+}
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.brick {
+    width: calc(25% - 10px);
+    margin-bottom: 10px;
+    height: auto;
+}
+
+.brick{
+    float: left;
+}
+
+.brick img {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: block;
+    max-width: 100%;
+}
+
+
+
+masonry-brick {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+
+masonry-brick img {
+    transition: all 2s ease;
+    transform: scale(1);
+}
+
+masonry-brick:hover img {
+    transform: scale(1.02);
+}

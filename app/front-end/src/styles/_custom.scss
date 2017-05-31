@@ -1,0 +1,26 @@
+// lightbox overrides
+
+
+.featherlight .featherlight-content {
+    padding: 0 0 0 0;
+    border-bottom: none;
+    background: transparent;
+    -moz-box-shadow: 0px 0px 63px 3px rgba(0,0,0,0.24);
+    box-shadow: 0px 0px 63px 3px rgba(0,0,0,0.24);
+    overflow: hidden;
+    .featherlight-next, .featherlight-previous {
+        svg.gallery__lightbox--prev, svg.gallery__lightbox--next {
+            height: 80px;
+            width: 80px;
+            fill: white;
+        }
+        &:hover {
+            background: none;
+        }
+    }
+    
+}
+
+.featherlight:last-of-type {
+    background: rgba(255, 255, 255, 0.8);
+}

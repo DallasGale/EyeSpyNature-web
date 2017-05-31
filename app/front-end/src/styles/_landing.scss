@@ -1,0 +1,162 @@
+﻿@import "mixins";
+
+.landing__layout {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: table;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
+    .logo {
+        vertical-align: middle;
+        display: table-cell;
+        width: 250px;
+        height: auto;
+        background-size: 100% !important;
+        background-repeat: no-repeat !important;
+        background-position: top 50px center !important;
+        position: relative;
+        top: 0;
+
+        @include fadeinKeyframe;
+        @include respond-to(phone-down) {
+            width: 160px;
+        }
+    }
+    .landing__layout--cta {
+       z-index: 100;
+        position: absolute;
+        text-align: center;
+        min-width: 200px;
+        margin: 0 auto;
+        left: 0;
+        bottom: 50px;
+        right: 0;
+        width: 10%;
+
+        @include fadeinKeyframe;
+     }
+}
+  
+.landing__layout--hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    z-index: 0;
+    // background: url('../../Media/gallery/153A3690_1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+     .col-xs-6 { 
+        padding-left: 20%;
+        padding-right: 0;
+         &:first-child {
+            padding-left:0;
+            padding-right: 20%;
+            
+         }
+    }
+}
+
+
+
+// Hero Slider
+
+/* 
+ * FadeShow jQuery Plugin
+ * Made by Erik Terwan
+ * 3 February 2015
+ * 
+ * This plugin is provided as-is and released under the terms of the MIT license.
+ */
+
+.background_left, 
+.background_right {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+}
+
+/*.background_right {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+}*/
+
+
+.background_hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+
+
+div.fadeShow-container
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #181818;
+	overflow: hidden;
+    float: left;
+}
+
+div.fadeShow-container
+  div.image
+{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-position: bottom center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: opacity 1.5s ease-in-out;
+	-moz-transition: opacity 1.5s ease-in-out;
+	-webkit-transition: opacity 1.5s ease-in-out;
+	opacity: 0;
+}
+
+div.fadeShow-container
+  div.image.fillHeight
+{
+	background-size: auto 100%;
+}
+
+div.fadeShow-container
+  div.image.active
+{
+	z-index: 3;
+	opacity: 1;
+}
+
+div.fadeShow-container
+  div.image.inactive
+{
+	z-index: 2;
+	opacity: 0;
+}
+
+div.fadeShow-container
+  div.image
+  	img
+{
+	width: 100px; /* leave this at 100px, we do calculations based on that number*/
+	display: none;
+}
+

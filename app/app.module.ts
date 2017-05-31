@@ -20,11 +20,6 @@ import { RecentImageComponent } from './landing/recent-work/recent-image.compone
 import { PrintInfoComponent } from './print-info/print-info.component';
 // Global Settings
 import { GlobalService } from './services/global-settings.service';
-//Events
-import { EventsListComponent } from './events/events-list.component';
-import { EventThumbnailComponent } from './events/event-thumbnail.component';
-import { EventService } from './services/event.service';
-import { EventDetailsComponent } from './events/event-details/event-details.component';
 //Navigation
 import { NavBarComponent } from './nav/navbar.component';
 import { NavigationService } from './services/nav.service';
@@ -48,15 +43,11 @@ import { appRoutes } from './routes';
         RecentImageComponent,
         PrintInfoComponent,
         HeroImgComponent,
-        EventsListComponent,
-        EventThumbnailComponent,
-        NavBarComponent,
-        EventDetailsComponent
+        NavBarComponent
         ],
     providers: [
         GlobalService, 
         NavigationService, 
-        EventService,
         HeroService, 
         RecentWorkService, 
         ToastrService],

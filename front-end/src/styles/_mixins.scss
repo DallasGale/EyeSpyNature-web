@@ -1,0 +1,108 @@
+﻿@mixin respond-to($breakpoint) {
+	  @if $breakpoint == "phone-down" {
+		@media (max-width: 767px) {
+		@content;
+	  }
+	}
+	  @if $breakpoint == "tablet-down" {
+		@media (max-width: 991px) {
+		@content;
+	  }
+	}
+      @if $breakpoint == "desktop-down" {
+		@media (max-width: 1199px) {
+		@content;
+	  }
+	}
+
+
+
+	@else if $breakpoint == "phone-up" {
+		  @media (min-width: 768px) {
+				@content;
+		}
+	}
+
+	@else if $breakpoint == "tablet-up" {
+		  @media (min-width: 992px) {
+				@content;
+		}
+	}
+
+	@else if $breakpoint == "desktop-up" {
+		  @media (min-width: 1200px) {
+				@content;
+		}
+	}
+}
+
+
+@mixin fadeinKeyframe {
+	
+		@keyframes animationFrames{
+		0% {
+			opacity:0;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+
+	@-moz-keyframes animationFrames{
+		0% {
+			opacity:0;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+
+	@-webkit-keyframes animationFrames {
+		0% {
+			opacity:0;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+
+	@-o-keyframes animationFrames {
+		0% {
+			opacity:0;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+
+	@-ms-keyframes animationFrames {
+		0% {
+			opacity:0;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+	}
+
+
+@mixin headerHeight {
+    height: 60px;
+}
+
+@mixin btn-shadow {
+-webkit-box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.31);
+-moz-box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.31);
+box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.31);
+}
+
+
+@mixin hover-transition { 
+    transition: all 0.3s;
+    &:hover {
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+}
+
+

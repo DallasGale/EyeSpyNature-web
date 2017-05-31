@@ -8,18 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var common_1 = require("@angular/common");
-var EyeSpyNatureAppComponent = (function () {
-    function EyeSpyNatureAppComponent() {
-    }
-    return EyeSpyNatureAppComponent;
-}());
+const core_1 = require("@angular/core");
+const common_1 = require("@angular/common");
+let EyeSpyNatureAppComponent = class EyeSpyNatureAppComponent {
+};
 EyeSpyNatureAppComponent = __decorate([
     core_1.Component({
         selector: 'eyespy-app',
         providers: [common_1.Location, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
-        template: "\n    <nav-bar></nav-bar>\n    <router-outlet></router-outlet>\n    "
+        template: `
+    <nav-bar></nav-bar>
+    <router-outlet></router-outlet>
+    `
     }),
     __metadata("design:paramtypes", [])
 ], EyeSpyNatureAppComponent);

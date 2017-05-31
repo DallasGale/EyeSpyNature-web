@@ -1,0 +1,46 @@
+﻿@import '_base';
+
+
+
+h1, h2, h3, h4, h5, h6, h7 {
+    @include titlefont;
+    color: $themeColor1;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 30px;
+}
+
+p, * {
+    @include bodyfont;
+    color: $grey;
+    font-size: 12px;
+}
+
+small {
+    @include subfont;
+}
+
+.paragraph-copy {
+    line-height: 22.5px;
+    @include bodyfont;
+}
+
+.paragraph-link {
+    font-weight: 600;
+    color: black;    
+    letter-spacing: 0.4px;
+    line-height: 16px;
+}
+
+.sub-heading {
+    font-size: 30px;
+    margin-bottom: 30px;
+}

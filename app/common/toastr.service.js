@@ -8,24 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var ToastrService = (function () {
-    function ToastrService() {
-    }
-    ToastrService.prototype.success = function (message, title) {
+const core_1 = require("@angular/core");
+let ToastrService = class ToastrService {
+    success(message, title) {
         toastr.success(message, title);
-    };
-    ToastrService.prototype.info = function (message, title) {
+    }
+    info(message, title) {
         toastr.info(message, title);
-    };
-    ToastrService.prototype.warning = function (message, title) {
+    }
+    warning(message, title) {
         toastr.warning(message, title);
-    };
-    ToastrService.prototype.error = function (message, title) {
+    }
+    error(message, title) {
         toastr.error(message, title);
-    };
-    return ToastrService;
-}());
+    }
+};
 ToastrService = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [])

@@ -1,0 +1,164 @@
+@import "mixins";
+/* 	--------------------------------------------------
+    uSkinned.net
+
+	BASE
+    -------------------------------------------------- */
+
+
+/* 	--------------------------------------------------
+    TABLE OF CONTENTS 
+    -------------------------------------------------- 
+    0.0 THEME COLORS
+	1.0 LINKS
+	2.0 LISTS
+	3.0 MISC
+	4.0 BUTTONS
+	
+*/
+
+/*
+	
+	BOOTSTRAP BREAKPOINTS
+	
+	.col-xs-	< 768px		(container width 100%)
+	.col-sm-	> 768px		(container width 750px)
+	.col-md-	> 992px		(container width 970px)
+	.col-lg-	> 1200px	(container width 1170px)
+	
+*/
+
+// Typography
+
+@mixin bodyfont {
+    font-family: "clone-rounded-latin";
+    font-weight: 100;
+}
+@mixin subfont {
+    font-family: "program", sans-serif;
+    font-weight: 100;
+}
+@mixin titlefont {
+    font-family: "broadsheet", serif;
+}
+
+@mixin arial {
+    font-family: "Arial", sans-serif;
+}
+
+$gold: #ca8726;
+$black: #2f2f2f;
+$white: #ffffff;
+$grey: #a0a0a0;
+$darkGrey: #626262;
+$lightGrey: #ededed;
+$lighterGrey: #e9e9e9;
+$yellow: #faa61d;
+
+/*	--------------------------------------------------
+	0.0 THEME COLORS
+	-------------------------------------------------- */
+
+
+$themeColor1: $black;
+$themeColor2: $yellow;
+$themeColor3: $grey;
+
+
+
+
+
+
+
+/*	--------------------------------------------------
+	1.0 LINKS
+	-------------------------------------------------- */
+.textlink {
+    text-decoration: none;
+    @include hover-transition;
+} 
+	
+
+/*	--------------------------------------------------
+	2.0 LISTS
+	-------------------------------------------------- */
+	
+	.navigation__list--item {
+        @include bodyfont;
+	}
+
+/* 	-------------------------------------------------- 
+	3.0 MISC
+	-------------------------------------------------- */
+	
+	
+/*	--------------------------------------------------
+	4.0 BUTTONS
+	-------------------------------------------------- */
+	
+    .button {
+        padding: 5px 20px;
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        display: block;
+        border:1px solid rgba(255,255,255,0);
+        @include titlefont;
+        @include hover-transition;
+        @include respond-to(tablet-down) {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    }
+    .gallery-cta {
+        font-size: 30px;
+        color: white;
+        background-color: $themeColor2;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .hero-cta {
+        border-color: white;
+        border-radius: 0;
+        padding: 10px 40px;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        @include bodyfont;
+        background: none;
+        color: white;
+        &:hover, 
+        &:focus {
+            background: white; 
+            color: black;
+        }
+    }
+
+
+    .main-cta {
+        color: white;
+        text-transform:capitalize;
+        background-color: black;
+        &:hover {
+            border-color: black;
+            background-color:white;
+            color: black;
+        }
+    }
+
+
+/*	--------------------------------------------------
+	5.0 ELEMENTS
+	-------------------------------------------------- */
+
+    section {
+        background-color: rgba(255,255,255,1);
+        position: relative;
+    }
+/*	--------------------------------------------------
+	END
+	-------------------------------------------------- */
+	
+		

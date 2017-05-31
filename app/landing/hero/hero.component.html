@@ -1,0 +1,14 @@
+<section class="container landing__layout">
+    <div class="landing__layout--cta">
+        <a href="#recent" class="button hero-cta">RECENT</a>
+    </div>
+    <div class="logo" [ngStyle]="{'background': 'url(' + branding.logo + ')'}"></div>
+</section>
+
+<div class="landing__layout--hero">
+    <ul class="cb-slideshow">
+        <li *ngFor="let hero of heros">
+            <span [ngStyle]="{'background': '#000000 url(' + hero.url + ')'}"></span>
+        </li>
+    </ul>
+</div>

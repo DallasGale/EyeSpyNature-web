@@ -8,21 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var global_settings_service_1 = require("../services/global-settings.service");
-var nav_service_1 = require("../services/nav.service");
-var NavBarComponent = (function () {
-    function NavBarComponent(globalService, navigationService) {
+const core_1 = require("@angular/core");
+const global_settings_service_1 = require("../services/global-settings.service");
+const nav_service_1 = require("../services/nav.service");
+let NavBarComponent = class NavBarComponent {
+    constructor(globalService, navigationService) {
         this.globalService = globalService;
         this.navigationService = navigationService;
     }
-    NavBarComponent.prototype.ngOnInit = function () {
+    ngOnInit() {
         this.branding = this.globalService;
         this.nav = this.navigationService.getNavs();
         this.social = this.navigationService.getSocials();
-    };
-    return NavBarComponent;
-}());
+    }
+};
 NavBarComponent = __decorate([
     core_1.Component({
         selector: 'nav-bar',

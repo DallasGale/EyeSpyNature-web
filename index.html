@@ -22,7 +22,7 @@
 
   <link rel="stylesheet" href="node_modules/toastr/build/toastr.min.css">
   <link rel="stylesheet" href="node_modules/ng2f-bootstrap/dist/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="app/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
   <!--<link rel="stylesheet" href="styles.css">-->
 
@@ -37,10 +37,12 @@
 
   <script src="systemjs.config.js"></script>
   <script>
-    System.import('app').catch(function (err) {
+    System.import('/app/main.js').catch(function (err) {
       console.error(err);
     });
 
+    var root = document.documentElement;
+    root.className += ' landing-page';
   </script>
 
 </head>
@@ -56,9 +58,9 @@
 try { Typekit.load({ async: true }); } catch (e) { }
 </script>
 
-<!--<script src="app/Scripts/dependencies.js"></script>-->
+<script src="Scripts/dependencies.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>-->
-<!--<script src="app/Scripts/scripts.js"></script>-->
+<script src="Scripts/scripts.js"></script>
 
 
 </html>

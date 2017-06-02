@@ -9,13 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require("@angular/core");
+const router_1 = require("@angular/router");
 const gallery_categories_service_1 = require("../services/gallery-categories.service");
+const router_2 = require("@angular/router");
 let GalleryListComponent = class GalleryListComponent {
-    constructor(galleryCategoriesService) {
+    constructor(galleryCategoriesService, router, route) {
         this.galleryCategoriesService = galleryCategoriesService;
+        this.router = router;
+        this.route = route;
+    }
+    showCat(id) {
+        this.router.navigate(['/gallery', { outlets: { 'cat': [id] } }]);
     }
     ngOnInit() {
-        this.categories = this.galleryCategoriesService.getCategories();
+        this.route.params.subscribe((params) => {
+            this.categories = this.galleryCategoriesService.getCategories();
+        });
     }
 };
 GalleryListComponent = __decorate([
@@ -23,13 +32,15 @@ GalleryListComponent = __decorate([
         selector: 'gallery-list',
         template: `
         <div class="row">
-            <div class="col-md-3" *ngFor="let item of categories">
-                <gallery-cta (eventClick)="handleEventClicked($event)" [category]="item"></gallery-cta>
+            <div class="col-md-3 col-sm-3" *ngFor="let item of categories">
+                <gallery-cta [routerLink]="['/gallery', {outlets: {'list': ['gallerylist'], 'cat': ['none']}}]" [category]="item" (click)="showCat(item.id)"></gallery-cta>            
             </div>
         </div>
     `
     }),
-    __metadata("design:paramtypes", [gallery_categories_service_1.GalleryCategoriesService])
+    __metadata("design:paramtypes", [gallery_categories_service_1.GalleryCategoriesService,
+        router_2.Router,
+        router_1.ActivatedRoute])
 ], GalleryListComponent);
 exports.GalleryListComponent = GalleryListComponent;
 //# sourceMappingURL=gallery-list.component.js.map

@@ -146,6 +146,9 @@
 
 
 // SECTION :: Recent work + Gallery + About
+.gallery-container {
+    padding-top: 100px;
+}
 
 .section__gallery {
     min-height: 100vh;
@@ -195,14 +198,14 @@
 }
 
 .section__recentwork--row {
-    max-width: 80%;
+    width: 100%;
     padding-bottom: 260px;
     margin: 0 auto;
 
-    .grid-sizer,
-    .grid-item {
-        width: calc(25% - 10px);
-    }
+    // .grid-sizer,
+    // .grid-item {
+    //     width: calc(25% - 10px);
+    // }
 }
 
 .section__recentwork--img-container {
@@ -274,8 +277,8 @@
 
 .grid-sizer,
 .grid-item {
-    width: calc(12% - 10px);
-    margin-bottom: 10px;
+    width: calc(33% - 20px);
+    margin-bottom: 20px;
 }
 
 .grid-item {
@@ -289,20 +292,23 @@
 
 
 
-figure {
+masonry-brick {
     overflow: hidden;
     position: relative;
     display: inline-block;
     vertical-align: top;
+    
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
 
-figure img {
+masonry-brick img {
     transition: all 2s ease;
     transform: scale(1);
 }
 
-figure:hover img {
+masonry-brick:hover img {
     transform: scale(1.02);
 }

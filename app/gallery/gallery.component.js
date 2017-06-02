@@ -25,11 +25,21 @@ GalleryComponent = __decorate([
     core_1.Component({
         selector: 'gallery',
         template: `
-        <div class="container">
+        <div class="container gallery-container">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-md-12">
                     <h1>{{pageTitle}}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <router-outlet name="list"></router-outlet>
                     <gallery-list></gallery-list>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <router-outlet name="cat"></router-outlet>
                 </div>
             </div>
         </div>

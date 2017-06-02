@@ -24,12 +24,18 @@ GalleryCategoriesComponent = __decorate([
     core_1.Component({
         selector: '',
         template: `
-        <h1>{{ category?.name }}</h1>
+    <div class="container gallery-container">
         <div class="row">
-            <div class="col-md-4">
-                <img [src]="category?.images.ref" [alt]="category?.name">
+            <div class="col-xs-12">
+                <h1>{{ category?.name }}</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img [src]="category?.images.ref" [alt]="category?.name">
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
     `
     }),
     __metadata("design:paramtypes", [gallery_categories_service_1.GalleryCategoriesService, router_1.ActivatedRoute])

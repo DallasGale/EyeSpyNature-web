@@ -5,12 +5,18 @@ import { ActivatedRoute } from '@angular/router'
 @Component({
     selector: '',
     template: `
-        <h1>{{ category?.name }}</h1>
+    <div class="container gallery-container">
         <div class="row">
-            <div class="col-md-4">
-                <img [src]="category?.images.ref" [alt]="category?.name">
+            <div class="col-xs-12">
+                <h1>{{ category?.name }}</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img [src]="category?.images.ref" [alt]="category?.name">
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
     `
 })
 

@@ -19,9 +19,7 @@ GalleryCtaComponent = __decorate([
     core_1.Component({
         selector: 'gallery-cta',
         template: `
-            <div class="well">
-                <button class="btn btn-default" (click)="handleClickMe()">{{ category?.name }}</button>
-            </div>
+                <button class="btn btn-default category-cta">{{ category?.name }}</button>
     `
     }),
     __metadata("design:paramtypes", [])

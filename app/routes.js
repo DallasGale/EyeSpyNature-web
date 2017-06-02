@@ -4,6 +4,7 @@ const landing_component_1 = require("./landing/landing.component");
 const about_component_1 = require("./about/about.component");
 const contact_component_1 = require("./contact/contact.component");
 const gallery_component_1 = require("./gallery/gallery.component");
+const gallery_list_component_1 = require("./gallery/gallery-list.component");
 const gallery_categories_component_1 = require("./gallery/gallery-categories/gallery-categories.component");
 exports.appRoutes = [
     {
@@ -25,11 +26,11 @@ exports.appRoutes = [
     },
     {
         path: 'gallery',
-        component: gallery_component_1.GalleryComponent
+        component: gallery_component_1.GalleryComponent, children: [
+            { path: 'gallerylist', component: gallery_list_component_1.GalleryListComponent, outlet: 'list' },
+            { path: ':id', component: gallery_categories_component_1.GalleryCategoriesComponent, outlet: 'cat' }
+        ]
     },
-    {
-        path: 'gallery/:id', component: gallery_categories_component_1.GalleryCategoriesComponent
-    }
 ];
 exports.routes = router_1.RouterModule.forRoot(exports.appRoutes);
 //# sourceMappingURL=routes.js.map

@@ -8,7 +8,7 @@ export class GalleryCategoriesActivator implements CanActivate {
 
     }
     canActivate(route:ActivatedRouteSnapshot) {
-        const categoryExists =  !!this.galleryCategoriesService.getCategory(+route.params['id'])
+        const categoryExists =  !!this.galleryCategoriesService.getCategory(route.params['id'])
 
         if (!categoryExists)
             this.router.navigate(['/404'])

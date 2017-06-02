@@ -16,6 +16,11 @@ let NavBarComponent = class NavBarComponent {
     constructor(globalService, navigationService) {
         this.globalService = globalService;
         this.navigationService = navigationService;
+        this.isIn = false;
+    }
+    toggleState() {
+        let bool = this.isIn;
+        this.isIn = bool === false ? true : false;
     }
     ngOnInit() {
         this.branding = this.globalService;

@@ -33,8 +33,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryCategoriesComponent } from './gallery/gallery-categories/gallery-categories.component';
 import { GalleryCategoriesService } from './services/gallery-categories.service';
 import { GalleryCategoriesActivator } from './gallery/gallery-categories/gallery-categories-activator.service';
-import { GalleryListComponent } from './gallery/gallery-list.component',
-import { GalleryCtaComponent } from './gallery/gallery-cta.component'
+import { GalleryListComponent } from './gallery/gallery-list.component';
+import { GalleryCtaComponent } from './gallery/gallery-cta.component';
 
 //Navigation
 import { NavBarComponent } from './nav/navbar.component';

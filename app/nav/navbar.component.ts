@@ -10,6 +10,7 @@ import {
 
 import { GlobalService } from '../services/global-settings.service';
 import { NavigationService } from '../services/nav.service';
+import { CommonModule } from '@angular/common';
 import '../Scripts/custom/headerShowHide';
 
 
@@ -20,6 +21,12 @@ import '../Scripts/custom/headerShowHide';
     
 })
 export class NavBarComponent {
+    isIn = false;  
+    toggleState() {
+        let bool = this.isIn;
+        this.isIn = bool === false ? true : false; 
+    }
+    
     nav:any[]
     cat:any[]
     branding: any

@@ -12,7 +12,8 @@ const core_1 = require("@angular/core");
 let GlobalService = class GlobalService {
     constructor() {
         this.logo = 'app/images/branding/logo-white2x.png';
-        this.logoStamp = 'app/images/branding/logo-black-stamp-only-2x.png';
+        this.logoStampBlack = 'app/images/branding/logo-black-stamp-only-2x.png';
+        this.logoStampWhite = 'app/images/branding/logo-white-stamp-only-2x.png';
     }
 };
 GlobalService = __decorate([

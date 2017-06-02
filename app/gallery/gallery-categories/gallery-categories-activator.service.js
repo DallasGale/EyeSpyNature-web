@@ -17,7 +17,7 @@ let GalleryCategoriesActivator = class GalleryCategoriesActivator {
         this.router = router;
     }
     canActivate(route) {
-        const categoryExists = !!this.galleryCategoriesService.getCategory(+route.params['id']);
+        const categoryExists = !!this.galleryCategoriesService.getCategory(route.params['id']);
         if (!categoryExists)
             this.router.navigate(['/404']);
         return categoryExists;

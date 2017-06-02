@@ -135,6 +135,10 @@ $themeColor3: $grey;
             color: black;
         }
     }
+     a [ id="recent"]:target ~ #section__recentwork {
+        -webkit-transform: translateY( -500px );
+        transform: translateY( -500px );
+    }
 
 
     .main-cta {

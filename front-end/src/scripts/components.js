@@ -1,63 +1,63 @@
 // HEADER
-//$(document).ready(function () {
+// $(document).ready(function () {
 //    $('.header').scrollToFixed();
-//});
+// });
 
 
 // SMOOTH SCROLL 
-$('a[href*="#"]:not([href="#"])').click(function () {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            }, 800, 'easeInOutExpo');
-            return false;
-        }
-    }
-});
+// $('a[href*="#"]:not([href="#"])').click(function () {
+//     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+//         var target = $(this.hash);
+//         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+//         if (target.length) {
+//             $('html, body').animate({
+//                 scrollTop: target.offset().top
+//             }, 800, 'easeInOutExpo');
+//             return false;
+//         }
+//     }
+// });
 
 
 
 
 // GALLERY 
-$(".section__recentwork--img-container:odd").addClass("even");
-$(".section__recentwork--img-container:even").addClass("odd");
+// $(".section__recentwork--img-container:odd").addClass("even");
+// $(".section__recentwork--img-container:even").addClass("odd");
 
-$(function () {
-    $('.lazy').lazy({
-        effect: "fadeIn",
-        effectTime: 2000,
-        threshold: 200
-    });
-});
+// $(function () {
+//     $('.lazy').lazy({
+//         effect: "fadeIn",
+//         effectTime: 2000,
+//         threshold: 200
+//     });
+// });
 
 
 
 
 // LIGHTBOX
 
-$(document).ready(function () {
-    $('.popup').magnificPopup({ type: 'image' });
-});
+// $(document).ready(function () {
+//     $('.popup').magnificPopup({ type: 'image' });
+// });
 
 
 
 
 // MASONRY GRID
 
-var $grid = $('.grid').masonry({
-    itemSelector: '.grid-item',
-    percentPosition: true,
-    horizontalOrder: true,
-    columnWidth: '.grid-sizer',
-    gutter: 10
-});
+// var $grid = $('.grid').masonry({
+//     itemSelector: '.grid-item',
+//     percentPosition: true,
+//     horizontalOrder: true,
+//     columnWidth: '.grid-sizer',
+//     gutter: 10
+// });
 
-$grid.imagesLoaded().progress(function () {
-    $grid.masonry('layout');
-});
+// $grid.imagesLoaded().progress(function () {
+//     $grid.masonry('layout');
+// });
 
 
 

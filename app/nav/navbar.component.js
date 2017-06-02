@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const core_1 = require("@angular/core");
 const global_settings_service_1 = require("../services/global-settings.service");
 const nav_service_1 = require("../services/nav.service");
+require("../Scripts/custom/headerShowHide");
 let NavBarComponent = class NavBarComponent {
     constructor(globalService, navigationService) {
         this.globalService = globalService;
@@ -19,6 +20,7 @@ let NavBarComponent = class NavBarComponent {
     ngOnInit() {
         this.branding = this.globalService;
         this.nav = this.navigationService.getNavs();
+        this.cat = this.navigationService.getCats();
         this.social = this.navigationService.getSocials();
     }
 };

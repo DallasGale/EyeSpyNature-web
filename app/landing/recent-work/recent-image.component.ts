@@ -4,19 +4,12 @@ import { RecentWorkService } from '../../services/recent-work.service'
 
 @Component({
    selector: 'recent-image',
-   template: `
-        <div class="row">
-            <div class="col-xs-12">
-                <button class="button main-cta" (click)="toggleAllImages()">
-                    {{ showAllImages ? "Show Less" : "Show More"}}
-                </button>
-            </div>
-        </div>
-       
-     `
+   templateUrl: 'app/landing/recent-work/recent-image.component.html',
  })
 
 export class RecentImageComponent implements OnInit {
+    openModalWindow:boolean=false;
+    imagePointer:number;
     images:any[]
     showAllImages: boolean;
 
@@ -27,6 +20,7 @@ export class RecentImageComponent implements OnInit {
     ngOnInit() {
         this.images = this.recentWokrService.getImages()
     }
+
     toggleAllImages(){
         if(this.showAllImages == true) {
             this.showAllImages = false;

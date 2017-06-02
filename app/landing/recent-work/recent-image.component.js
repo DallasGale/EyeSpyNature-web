@@ -13,6 +13,7 @@ const recent_work_service_1 = require("../../services/recent-work.service");
 let RecentImageComponent = class RecentImageComponent {
     constructor(recentWokrService) {
         this.recentWokrService = recentWokrService;
+        this.openModalWindow = false;
     }
     ngOnInit() {
         this.images = this.recentWokrService.getImages();
@@ -29,16 +30,7 @@ let RecentImageComponent = class RecentImageComponent {
 RecentImageComponent = __decorate([
     core_1.Component({
         selector: 'recent-image',
-        template: `
-        <div class="row">
-            <div class="col-xs-12">
-                <button class="button main-cta" (click)="toggleAllImages()">
-                    {{ showAllImages ? "Show Less" : "Show More"}}
-                </button>
-            </div>
-        </div>
-       
-     `
+        templateUrl: 'app/landing/recent-work/recent-image.component.html',
     }),
     __metadata("design:paramtypes", [recent_work_service_1.RecentWorkService])
 ], RecentImageComponent);

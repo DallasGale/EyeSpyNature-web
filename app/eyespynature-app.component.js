@@ -17,7 +17,9 @@ EyeSpyNatureAppComponent = __decorate([
         selector: 'eyespy-app',
         providers: [common_1.Location, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
         template: `
-    <nav-bar></nav-bar>
+    <header id="header" class="header">
+        <nav-bar></nav-bar>
+    </header>
     <router-outlet></router-outlet>
     `
     }),

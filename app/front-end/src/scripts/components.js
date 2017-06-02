@@ -1,7 +1,7 @@
 // HEADER
-//$(document).ready(function () {
-//    $('.header').scrollToFixed();
-//});
+$(document).ready(function () {
+   $('.header').scrollToFixed();
+});
 
 
 // SMOOTH SCROLL 

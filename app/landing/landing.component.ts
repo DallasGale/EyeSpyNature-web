@@ -4,7 +4,7 @@ import { GlobalService } from '../services/global-settings.service'
 
 @Component({
     template: `
-        <hero></hero>
+        <hero class="hero"></hero>
         <recent-work></recent-work>
         <print-info></print-info>
     `
@@ -16,5 +16,6 @@ export class LandingPageComponent implements OnInit {
     }
     ngOnInit() {
         this.branding = this.globalService
+        
     }
 }

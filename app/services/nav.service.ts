@@ -10,6 +10,13 @@ export class NavigationService {
     getNav(id:number) { 
         return NAVIGATION.find(nav => nav.id === id) 
     }
+    // GALLERY CATEGORIES
+    getCats() { 
+        return GALLERY 
+    }
+    getCat(id:any) { 
+        return GALLERY.find(cat => cat.id === id) 
+    }
      // Social Media
     getSocials() { 
         return SOCIALS 
@@ -22,56 +29,48 @@ export class NavigationService {
 const NAVIGATION = [
     {
         id: 1,
-        title: 'home',
-        link: '/'
-    },
-    {
-        id: 2,
         title: 'about',
         link: '/about'
     },
     {
-        id: 3,
-        title: 'browse gallery',
-        categories: [
-            {
-                id: 1,
-                title: 'flowers',
-                link: 'flowers'
-            },
-            {
-                id: 2,
-                title: 'leaves',
-                link: 'leaves'
-            },
-            {
-                id: 3,
-                title: 'insects',
-                link: 'insects'
-            },
-            {
-                id: 4,
-                title: 'fungai',
-                link: 'fungai'
-            }
-        ]
-    },
-    {
-        id: 3,
+        id: 2,
         title: 'contact',
         link: '/contact'
     },
     {
-        id: 4,
+        id: 3,
         title: 'shop digital stock',
         link: '/shop/digital'
     },
     {
-        id: 5,
+        id: 4,
         title: 'shop limited prints',
         link: '/shop/prints'
     }
 ] 
+
+const GALLERY = [
+     {
+        id: 'flowers',
+        title: 'flowers',
+        link: 'flowers'
+    },
+    {
+        id: 'leaves',
+        title: 'leaves',
+        link: 'leaves'
+    },
+    {
+        id: 'insects',
+        title: 'insects',
+        link: 'insects'
+    },
+    {
+        id: 'fungai',
+        title: 'fungai',
+        link: 'fungai'
+    },
+]
 const SOCIALS = [
     {
         id: 1,

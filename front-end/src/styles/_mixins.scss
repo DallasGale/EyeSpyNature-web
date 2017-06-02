@@ -37,6 +37,20 @@
 }
 
 
+@mixin fadeinAnimation {
+	animation: animationFrames linear 2s;
+        animation-iteration-count: 1;
+        transform-origin: 50% 50%;
+        animation-fill-mode:forwards;
+}
+
+@mixin fadeinAnimationLong {
+	animation: animationFrames linear 4s;
+        animation-iteration-count: 1;
+        transform-origin: 50% 50%;
+        animation-fill-mode:forwards;
+}
+
 @mixin fadeinKeyframe {
 	
 		@keyframes animationFrames{

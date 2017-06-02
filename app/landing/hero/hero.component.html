@@ -1,6 +1,8 @@
 <section class="container landing__layout">
     <div class="landing__layout--cta">
-        <a href="#recent" class="button hero-cta">RECENT</a>
+        <a href="#recent" class="button hero-cta" (click)="scroll()">RECENT WORK</a>
+        <!--<a class="button hero-cta" (click)="toggleMove()">CLICK ANIMATION</a>
+        <div [@focusPanel]='state' style="height:100px; width: 100px; display: block; background: white; color: black;">Look</div>-->
     </div>
     <div class="logo" [ngStyle]="{'background': 'url(' + branding.logo + ')'}"></div>
 </section>

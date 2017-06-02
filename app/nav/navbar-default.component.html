@@ -1,0 +1,46 @@
+    <nav class="navbar">
+        <div class="container">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+            <a routerLink="/" class="branding" style="top: 5px;">
+                <div class="branding__logo">
+                    <img src="app/Images/branding/logo-black-stamp-only-2x.png" style="height: 50px;" />
+                </div>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="col-xs-12 navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__list--item dropdown" dropdown>
+                        <button dropdownToggle type="button" class="button dropbtn dropdown-toggle">
+                            BROWSE GALLERY <span class="caret"></span>
+                        </button>
+                        <ul *dropdownMenu class="dropdown-menu" role="menu">
+                            <li *ngFor="let item of cat" role="menuitem navigation__list--item-link">
+                                <a class="dropdown-item" routerLink="{{ item.link }}">{{item.title}}</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li *ngFor="let item of nav" class="navigation__list--item">
+                        <a routerLink="{{ item.link }}" routerLinkActive="active" class="navigation__list--item-link">
+                            {{ item.title }}
+                        </a>
+                    </li>
+                    <li class="navigation__list--item icons social">
+                        <ul class="social__icons">
+                            <li *ngFor="let item of social" [attr.class]="'social__icons--item ' + item.class">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>

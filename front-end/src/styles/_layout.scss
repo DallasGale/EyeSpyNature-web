@@ -167,8 +167,7 @@
     width: 100%;
     margin: 0 auto;
     position: relative;
-
-
+  
     .col-xs-6, .col-sm-6, .col-md-6 {
         padding-left: 45px;
         padding-right: 45px;
@@ -273,26 +272,24 @@
 
 /* ---- .grid-item ---- */
 
-.brick {
-    width: calc(25% - 10px);
+.grid-sizer,
+.grid-item {
+    width: calc(12% - 10px);
     margin-bottom: 10px;
-    height: auto;
 }
 
-.brick{
+.grid-item {
     float: left;
 }
 
-.brick img {
-    margin-left: 10px;
-    margin-right: 10px;
+.grid-item img {
     display: block;
     max-width: 100%;
 }
 
 
 
-masonry-brick {
+figure {
     overflow: hidden;
     position: relative;
     display: inline-block;
@@ -301,11 +298,11 @@ masonry-brick {
 
 
 
-masonry-brick img {
+figure img {
     transition: all 2s ease;
     transform: scale(1);
 }
 
-masonry-brick:hover img {
+figure:hover img {
     transform: scale(1.02);
 }

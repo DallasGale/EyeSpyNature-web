@@ -78,7 +78,7 @@
             }
         }
         .navigation__list--item-link {
-            color: black;
+            color: white;
             font-weight: 600;
             @include respond-to(phone-down) {
                 color: white;
@@ -98,7 +98,7 @@
             display: inline-block;
             list-style: none;
             height: 25px;
-            width: 28px;
+            width: 24px;
             background: url('../app/images/icons/icon_sprite.png');
             background-size: 90px;
             background-position: left top;
@@ -108,7 +108,7 @@
                 background-position: top left;
             }
             &.facebook {
-                background-position: top left -15px; 
+                background-position: top left -22px; 
             }
             &.instagram {
                 background-size: 100px;

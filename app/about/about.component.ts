@@ -1,0 +1,15 @@
+import { Component } from '@angular/core'
+
+@Component({
+    selector: 'about',
+    template: `   
+        <h1>{{pageTitle}}</h1>
+    `
+})
+
+export class AboutComponent {
+    constructor() {
+        var root = document.documentElement;
+        root.className += ' internal-page';
+    }
+}

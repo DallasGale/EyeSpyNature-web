@@ -21,7 +21,7 @@ let LandingPageComponent = class LandingPageComponent {
 LandingPageComponent = __decorate([
     core_1.Component({
         template: `
-        <hero></hero>
+        <hero class="hero"></hero>
         <recent-work></recent-work>
         <print-info></print-info>
     `

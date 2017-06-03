@@ -275,6 +275,13 @@
 
 /* ---- .grid-item ---- */
 
+.gallery-container {
+    .grid-item {
+        width: calc(50% - 20px);
+    }
+}
+
+
 .grid-sizer,
 .grid-item {
     width: calc(33% - 20px);

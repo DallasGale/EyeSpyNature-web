@@ -5,14 +5,16 @@ import { ActivatedRoute } from '@angular/router'
 @Component({
     selector: '',
     template: `
-    <div class="container gallery-container">
+    <div class="container-fluid gallery-container">
         <div class="row">
             <div class="col-xs-12">
                 <h1>{{ category?.name }}</h1>
                 <div class="row">
-                    <div class="col-md-4">
-                        <img [src]="category?.images.ref" [alt]="category?.name">
-                    </div>
+                    <masonry [options]="{ transitionDuration: '0.5s' }">
+                        <masonry-brick *ngFor="let image of category.images" class="grid-item">
+                            <img [src]="'app/media/watermarked/' + image?.ref">
+                        </masonry-brick>
+                    </masonry>
                 </div>
             </div>
         </div>

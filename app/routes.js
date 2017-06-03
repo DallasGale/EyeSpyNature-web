@@ -26,11 +26,14 @@ exports.appRoutes = [
     },
     {
         path: 'gallery',
-        component: gallery_component_1.GalleryComponent, children: [
-            { path: 'gallerylist', component: gallery_list_component_1.GalleryListComponent, outlet: 'list' },
-            { path: ':id', component: gallery_categories_component_1.GalleryCategoriesComponent, outlet: 'cat' }
-        ]
+        component: gallery_component_1.GalleryComponent, children: []
     },
+    {
+        path: 'gallerylist', component: gallery_list_component_1.GalleryListComponent
+    },
+    {
+        path: 'gallery/:id', component: gallery_categories_component_1.GalleryCategoriesComponent
+    }
 ];
-exports.routes = router_1.RouterModule.forRoot(exports.appRoutes);
+exports.routes = router_1.RouterModule.forRoot(exports.appRoutes, { enableTracing: true });
 //# sourceMappingURL=routes.js.map

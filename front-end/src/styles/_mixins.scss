@@ -45,7 +45,7 @@
 }
 
 @mixin fadeinAnimationLong {
-	animation: animationFrames linear 4s;
+	animation: animationFrames linear 1s;
         animation-iteration-count: 1;
         transform-origin: 50% 50%;
         animation-fill-mode:forwards;

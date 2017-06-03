@@ -33,13 +33,12 @@ GalleryComponent = __decorate([
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <router-outlet name="list"></router-outlet>
                     <gallery-list></gallery-list>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <router-outlet name="cat"></router-outlet>
+                    <router-outlet name="imagesOutlet"></router-outlet>
                 </div>
             </div>
         </div>

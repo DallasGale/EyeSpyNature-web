@@ -14,6 +14,7 @@ const router_1 = require("@angular/router");
 const forms_1 = require("@angular/forms");
 const angular2_masonry_1 = require("angular2-masonry");
 const animations_1 = require("@angular/platform-browser/animations");
+const http_1 = require("@angular/http");
 // Main app
 const eyespynature_app_component_1 = require("./eyespynature-app.component");
 // Landing
@@ -61,7 +62,8 @@ AppModule = __decorate([
             angular2_masonry_1.MasonryModule,
             ngx_bootstrap_1.BsDropdownModule.forRoot(),
             angular_modal_gallery_1.ModalGalleryModule,
-            animations_1.BrowserAnimationsModule
+            animations_1.BrowserAnimationsModule,
+            http_1.HttpModule
         ],
         declarations: [
             eyespynature_app_component_1.EyeSpyNatureAppComponent,

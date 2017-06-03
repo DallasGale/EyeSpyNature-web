@@ -1,6 +1,8 @@
-﻿import { Routes, RouterModule } from '@angular/router'
+﻿import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router'
 import { LandingPageComponent } from './landing/landing.component'
 import { ModuleWithProviders } from '@angular/core'
+
 
 import { EyeSpyNatureAppComponent } from './eyespynature-app.component'
 import { AboutComponent } from './about/about.component'
@@ -29,15 +31,16 @@ export const appRoutes: Routes = [
     },
     {
         path: 'gallery',
-        component: GalleryComponent, children: [ 
-        { path: 'gallerylist', component: GalleryListComponent, outlet: 'list' },
-        { path: ':id', component: GalleryCategoriesComponent, outlet: 'cat' }]
+        component: GalleryComponent, children: []
     },
-    // {
-    //   path: 'gallery/:id', 
-    //   component: GalleryCategoriesComponent  
-    // }
+    { 
+        path: 'gallerylist', component: GalleryListComponent 
+    },
+    { 
+        path: 'gallery/:id', component: GalleryCategoriesComponent 
+    }
 ];
 
-export const routes: ModuleWithProviders = RouterModule.forRoot(appRoutes);
- 
+
+
+export const routes: ModuleWithProviders = RouterModule.forRoot(appRoutes, {enableTracing: true});

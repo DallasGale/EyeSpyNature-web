@@ -18,8 +18,8 @@ let GalleryListComponent = class GalleryListComponent {
         this.router = router;
         this.route = route;
     }
-    showCat(id) {
-        this.router.navigate(['/gallery', { outlets: { 'cat': [id] } }]);
+    showBio(id) {
+        this.router.navigate(['/gallery', { outlets: { 'bio': [id] } }]);
     }
     ngOnInit() {
         this.route.params.subscribe((params) => {
@@ -33,10 +33,22 @@ GalleryListComponent = __decorate([
         template: `
         <div class="row">
             <div class="col-md-3 col-sm-3" *ngFor="let item of categories">
-                <gallery-cta [routerLink]="['/gallery', {outlets: {'list': ['gallerylist'], 'cat': ['none']}}]" [category]="item" (click)="showCat(item.id)"></gallery-cta>            
+                <gallery-cta [routerLink]="item.id" [category]="item" class="gallery-cta"></gallery-cta>            
             </div>
         </div>
-    `
+    `,
+        styles: [`
+        .gallery-cta {
+            font-size: 30px;
+            color: white;
+            background-color: #faa61d;
+            padding-top: 0;
+            padding-bottom: 0;
+            display: block;
+            margin-bottom: 20px;
+
+        }
+    `]
     }),
     __metadata("design:paramtypes", [gallery_categories_service_1.GalleryCategoriesService,
         router_2.Router,

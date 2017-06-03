@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { MasonryModule } from 'angular2-masonry';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Error404Component } from './errors/404.component'
+import { HttpModule } from '@angular/http';
+
 
 // Main app
 import { EyeSpyNatureAppComponent } from './eyespynature-app.component';
@@ -47,7 +49,6 @@ import { appRoutes } from './routes';
 
 //ThirdParty
 import { BsDropdownModule } from 'ngx-bootstrap';
-
 import 'hammerjs';
 import 'mousetrap';
 import { ModalGalleryModule } from 'angular-modal-gallery';
@@ -61,7 +62,8 @@ import { ModalGalleryModule } from 'angular-modal-gallery';
         MasonryModule,
         BsDropdownModule.forRoot(),
         ModalGalleryModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        HttpModule
     ],
     declarations: [
         EyeSpyNatureAppComponent,
